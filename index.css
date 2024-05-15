@@ -174,10 +174,11 @@ button:hover {
     font-size: 25px;
     cursor: pointer;
     text-align: center;
+    padding-bottom: 20px;
   }
   
   .social-links i {
-    margin: 0 10px; /* Adjust the value as needed */
+    margin: 25px; /* Adjust the value as needed */
   }
 
 @media only screen and (max-width:700px) {
@@ -308,15 +309,15 @@ button:hover {
   width: calc(33.33% - 20px);
   margin-bottom: 20px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   overflow: hidden;
   transition: background-color 0.3s ease;
   text-decoration: none;
 }
 
 .card:hover {
-  background-color: #f0f0f0;
+    background: linear-gradient(to right, #045de9, #09c6f9);
 }
 
 .card-content {
@@ -333,6 +334,14 @@ button:hover {
   margin-bottom: 15px;
   color: #666;
 }
+.card-content h3:hover {
+    color: #fff;
+  }
+
+.card-content p:hover {
+    color: #fff;
+  }
+
 
 .card-content .github-icon {
   display: inline-block;

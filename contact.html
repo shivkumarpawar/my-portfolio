@@ -1,83 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact</title>
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-  <div class="container">
-    <div class="navbar">
-        <label class="logo">Shiv Kumar</label>
-        <nav>
-          <ul id="menuList">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a class="active" href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="menu-icon"> <i class="fa fa-bars" onclick="toggleMenu()"></i></div>
-      </div>
 
-    <div class="row">
-      <div class="col-1">
-        <h2>Contact Me</h2>
-        <p>Email: your@email.com</p>
-        <p>Phone: +1234567890</p>
-        <!-- Additional contact info as needed -->
-      </div>
-      <div class="col-2">
-        <img src="pic1.svg" alt="image" class="controller">
-       
-    
-          
-      </div>
-      </div>
-      <div class="contact-form">
-        <h2>Contact Me</h2>
-        <form action="#" method="post">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <label class="logo">Shiv Kumar</label>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a class="active" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-icon"> <i class="fa fa-bars" onclick="toggleMenu()"></i></div>
+        </div>
+
+        <div class="row">
+            <div class="col-1">
+                <h2>Contact Me</h2>
+                <p>Email: your@email.com</p>
+                <p>Phone: +1234567890</p>
+                <!-- Additional contact info as needed -->
+            </div>
+            <div class="col-2">
+                <img src="pic1.svg" alt="image" class="controller">
+            </div>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </div>
 
+
+
+    </div>
+    <script>
+        var menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
     
-      
-  </div>
-  <script>
-
-var menuList = document.getElementById("menuList");
-var menuIcon = document.querySelector(".menu-icon");
-
-// Initial state
-menuList.style.maxHeight = "0px";
-
-// Function to toggle menu visibility
-function toggleMenu() {
-  if (menuList.style.maxHeight == "0px") {
-    menuList.style.maxHeight = "130px";
-    // Add event listener to close menu on outside click
-    document.body.addEventListener("click", closeMenuOnClickOutside);
-  } else {
-    menuList.style.maxHeight = "0px";
-    // Remove event listener when menu is closed
-    document.body.removeEventListener("click", closeMenuOnClickOutside);
-  }
-}
-
-// Function to close menu when clicked outside
-function closeMenuOnClickOutside(event) {
-  if (!menuIcon.contains(event.target) && !menuList.contains(event.target)) {
-    menuList.style.maxHeight = "0px";
-    // Remove event listener when menu is closed
-    document.body.removeEventListener("click", closeMenuOnClickOutside);
-  }
-}
-  </script>
+        function toggleMenu() {
+          if (menuList.style.maxHeight == "0px") {
+            menuList.style.maxHeight = "130px"
+          }
+          else {
+            menuList.style.maxHeight = "0px"
+          }
+        }
+      </script>
 </body>
+
 </html>
