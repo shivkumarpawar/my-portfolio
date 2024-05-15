@@ -9,11 +9,17 @@
 <body>
   <div class="container">
     <div class="navbar">
-      <label class="logo">Shiv Kumar</label>
-      <nav>
-        <!-- Navigation menu -->
-      </nav>
-    </div>
+        <label class="logo">Shiv Kumar</label>
+        <nav>
+          <ul id="menuList">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="menu-icon"> <i class="fa fa-bars" onclick="toggleMenu()"></i></div>
+      </div>
 
     <div class="row">
       <div class="col-1">
@@ -23,9 +29,26 @@
         <!-- Additional contact info as needed -->
       </div>
       <div class="col-2">
-        <!-- Your image or additional content here -->
+        <img src="pic1.svg" alt="image" class="controller">
+        <div class="color-box"></div>
+        <!-- <button type="button">
+            Hire me
+        </button> -->
+          
+      </div>
       </div>
     </div>
+
+    <div class="contact-form">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      
   </div>
 </body>
 </html>

@@ -9,11 +9,17 @@
 <body>
   <div class="container">
     <div class="navbar">
-      <label class="logo">Shiv Kumar</label>
-      <nav>
-        <!-- Navigation menu -->
-      </nav>
-    </div>
+        <label class="logo">Shiv Kumar</label>
+        <nav>
+          <ul id="menuList">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="menu-icon"> <i class="fa fa-bars" onclick="toggleMenu()"></i></div>
+      </div>
 
     <div class="row">
       <div class="col-1">
@@ -21,7 +27,13 @@
         <p>Write something about yourself here.</p>
       </div>
       <div class="col-2">
-        <!-- Your image or additional content here -->
+       
+        <img src="pic1.svg" alt="image" class="controller">
+        <div class="color-box"></div>
+        <!-- <button type="button">
+            Hire me
+        </button> -->
+          
       </div>
     </div>
   </div>
