@@ -47,7 +47,7 @@
       </div>
     </div>
     <div class="social-links">
-      <a href="https://www.linkedin.com/in/shikumarpawar/"><i class="fa fa-linkedin"></i></a>
+      <a href="https://www.linkedin.com/in/shivkumarpawar/"><i class="fa fa-linkedin"></i></a>
       <a href="https://github.com/shivkumarpawar/"> <i class="fa fa-github"></i></a>
       <a href="https://www.instagram.com/shivvpawar"><i class="fa fa-instagram"></i></a>
       <a href="https://api.whatsapp.com/send/?phone=%2B918208627628&text=Hello+Shiv"><i class="fa fa-whatsapp"></i></a>
@@ -57,17 +57,33 @@
 
   <script>
 
-    var menuList = document.getElementById("menuList");
-    menuList.style.maxHeight = "0px";
+var menuList = document.getElementById("menuList");
+var menuIcon = document.querySelector(".menu-icon");
 
-    function toggleMenu() {
-      if (menuList.style.maxHeight == "0px") {
-        menuList.style.maxHeight = "130px"
-      }
-      else {
-        menuList.style.maxHeight = "0px"
-      }
-    }
+// Initial state
+menuList.style.maxHeight = "0px";
+
+// Function to toggle menu visibility
+function toggleMenu() {
+  if (menuList.style.maxHeight == "0px") {
+    menuList.style.maxHeight = "130px";
+    // Add event listener to close menu on outside click
+    document.body.addEventListener("click", closeMenuOnClickOutside);
+  } else {
+    menuList.style.maxHeight = "0px";
+    // Remove event listener when menu is closed
+    document.body.removeEventListener("click", closeMenuOnClickOutside);
+  }
+}
+
+// Function to close menu when clicked outside
+function closeMenuOnClickOutside(event) {
+  if (!menuIcon.contains(event.target) && !menuList.contains(event.target)) {
+    menuList.style.maxHeight = "0px";
+    // Remove event listener when menu is closed
+    document.body.removeEventListener("click", closeMenuOnClickOutside);
+  }
+}
   </script>
 </body>
 

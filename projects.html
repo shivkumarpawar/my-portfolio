@@ -18,8 +18,18 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <div class="menu-icon"> <i class="fa fa-bars" onclick="toggleMenu()"></i></div>
     </div>
-
+    <div class="row">
+        <div class="col-1">
+            <h2>Projects</h2>
+            <p>Following are some of my projects</p>
+            <!-- Additional contact info as needed -->
+        </div>
+        <div class="col-2">
+            <img src="pic1.svg" alt="image" class="controller">
+        </div>
+    </div>
     <div class="project-cards">
       <a href="#" class="card">
         <div class="card-content">
@@ -41,5 +51,35 @@
       </a>
     </div>
   </div>
+  <script>
+
+var menuList = document.getElementById("menuList");
+var menuIcon = document.querySelector(".menu-icon");
+
+// Initial state
+menuList.style.maxHeight = "0px";
+
+// Function to toggle menu visibility
+function toggleMenu() {
+  if (menuList.style.maxHeight == "0px") {
+    menuList.style.maxHeight = "130px";
+    // Add event listener to close menu on outside click
+    document.body.addEventListener("click", closeMenuOnClickOutside);
+  } else {
+    menuList.style.maxHeight = "0px";
+    // Remove event listener when menu is closed
+    document.body.removeEventListener("click", closeMenuOnClickOutside);
+  }
+}
+
+// Function to close menu when clicked outside
+function closeMenuOnClickOutside(event) {
+  if (!menuIcon.contains(event.target) && !menuList.contains(event.target)) {
+    menuList.style.maxHeight = "0px";
+    // Remove event listener when menu is closed
+    document.body.removeEventListener("click", closeMenuOnClickOutside);
+  }
+}
+  </script>
 </body>
 </html>

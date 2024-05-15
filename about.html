@@ -37,5 +37,37 @@
       </div>
     </div>
   </div>
+
+  <script>
+    var menuList = document.getElementById("menuList");
+var menuIcon = document.querySelector(".menu-icon");
+
+// Initial state
+menuList.style.maxHeight = "0px";
+
+// Function to toggle menu visibility
+function toggleMenu() {
+  if (menuList.style.maxHeight == "0px") {
+    menuList.style.maxHeight = "130px";
+    // Add event listener to close menu on outside click
+    document.body.addEventListener("click", closeMenuOnClickOutside);
+  } else {
+    menuList.style.maxHeight = "0px";
+    // Remove event listener when menu is closed
+    document.body.removeEventListener("click", closeMenuOnClickOutside);
+  }
+}
+
+// Function to close menu when clicked outside
+function closeMenuOnClickOutside(event) {
+  if (!menuIcon.contains(event.target) && !menuList.contains(event.target)) {
+    menuList.style.maxHeight = "0px";
+    // Remove event listener when menu is closed
+    document.body.removeEventListener("click", closeMenuOnClickOutside);
+  }
+}
+  </script>
+
 </body>
+
 </html>
